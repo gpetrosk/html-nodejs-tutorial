@@ -1,0 +1,35 @@
+{
+  "name": "html-nodejs-tutorial",
+  "version": "1.0.0",
+  "description": "An example Node.js Express project that renders a simple HTML page",
+  "main": "app.js",
+  "scripts": {
+    "start": "node ./bin/www"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gpetrosk/html-nodejs-tutorial.git"
+  },
+  "dependencies": {
+    "body-parser": "~1.17.1",
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.6.3",
+    "express": "~4.15.2",
+    "hbs": "~4.0.1",
+    "morgan": "~1.8.1",
+    "serve-favicon": "~2.4.2"
+  },
+  "keywords": [
+    "nodejs",
+    "express",
+    "html",
+    "javascript",
+    "css"
+  ],
+  "author": "Greg Petroski",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gpetrosk/html-nodejs-tutorial/issues"
+  },
+  "homepage": "https://github.com/gpetrosk/html-nodejs-tutorial#readme"
+}

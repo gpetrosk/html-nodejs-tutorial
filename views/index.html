@@ -1,6 +1,47 @@
 <html>
-    <body>
-        <h1>Hello World</h1>
-        <p>This is a test page.</p>
+    <head>
+            <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    </head>
+    <body class="bg-light">
+        <div class="container">
+            <h1>Hello World</h1>
+            <p>This is a test page.</p>
+            <div id="myDiv">Some other text</div>
+            <form >
+                <input name="inputBox" type="text"/>
+                <button name="add" onclick="addText(event, this.parentNode)">
+                    Set Value
+                </button>
+                <button name="remove" onclick="removeText(event, this.parentNode)">
+                    Remove Value
+                </button>
+            </form>
+
+            <div id="outputText"></div>
+        </div>
     </body>
+    <script>
+        function addText(event, form) {
+            event.preventDefault(); 
+            //alert(form.inputBox.value);
+            var inputBox = form.inputBox;
+
+            var outputText = document.getElementById("outputText");
+
+            outputText.innerHTML = inputBox.value;
+        }
+        function removeText(event, form) {
+            event.preventDefault(); 
+
+            var outputText = document.getElementById("outputText");
+
+            outputText.innerHTML = "";
+        }
+
+        var myDiv = document.getElementById("myDiv");
+        var price = 1.00;
+        var message = "Hello World";
+
+        //alert(myDiv.textContent);
+    </script>
 </html>

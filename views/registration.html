@@ -15,9 +15,9 @@
         <div class="col-md-4 order-md-2 mb-4">
           <h4 class="d-flex justify-content-between align-items-center mb-3">
             <span class="text-muted">Registered Users</span>
-            <span id="registeredCount" class="badge badge-secondary badge-pill">0</span>
+            <span class="badge badge-secondary badge-pill">0</span>
           </h4>
-          <ul id="registeredList" class="list-group mb-3">
+          <ul class="list-group mb-3">
           </ul>
         </div>
         <div class="col-md-8 order-md-1">
@@ -87,7 +87,7 @@
               </div>
             </div>
             <hr class="mb-4">
-            <button class="btn btn-primary btn-lg btn-block" type="submit" onclick="registerUser(event, this.parentNode)">Register</button>
+            <button class="btn btn-primary btn-lg btn-block" type="submit">Register</button>
           </form>
         </div>
       </div>
@@ -96,20 +96,8 @@
     <script>
         function registerUser(event, form) {
             event.preventDefault(); 
-            //alert(form.inputBox.value);
-            var inputBox = form.inputBox;
-
-            var firstName, lastName, email, address, country, state, zip;
-
-            firstName = form.firstName.value;
-            lastName = form.lastName.value;
-            email = form.email.value;
-            address = form.address.value;
-            country = form.country.value;
-            state = form.state.value;
-            zip = form.zip.value;
-
-            addHtmlToUserList(firstName, lastName, email, address, country, state, zip);
+            
+            // TODO: Retrieve values from frorm and pass to addHtmlToUserList function
         }
 
         function addHtmlToUserList(firstName, lastName, email, address, country, state, zip) {
@@ -121,25 +109,11 @@
               </div>
               <span class="text-muted">${email}</span>`;
 
-            var registeredList = document.getElementById("registeredList");
-
-            var newLiUser = document.createElement('li');
-            newLiUser.innerHTML = registeredUserHtml;
-            newLiUser.className = "list-group-item";
-            registeredList.appendChild(newLiUser);
-
-
-            var registeredCount = document.getElementById('registeredCount');
-            registeredCount.textContent = parseInt(registeredCount.textContent) + 1;
+            // TODO: Add html to UL
         }
 
         function removeUserFromList(event, li) {
-            var registeredList = document.getElementById("registeredList");
-
-            registeredList.removeChild(li);
-
-            var registeredCount = document.getElementById('registeredCount');
-            registeredCount.textContent = parseInt(registeredCount.textContent) - 1;
+            // TODO: Remove LI html from UL
         }
     
     
